@@ -5,4 +5,4 @@ cd gripp-client
 yarn add @api-platform/client-generator
 yarn add redux react-redux redux-thunk redux-form react-router-dom connected-react-router prop-types lodash
 yarn add bootstrap font-awesome
-yarn start
+yarn build
