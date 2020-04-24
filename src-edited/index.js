@@ -14,17 +14,21 @@ import {
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
 import * as serviceWorker from './serviceWorker';
+
 // Replace "tag" with the name of the resource type
+
 import tag from './reducers/tag/';
 import tagRoutes from './routes/tag';
+
+// import Welcome from './Welcome';
 
 const history = createBrowserHistory();
 const store = createStore(
   combineReducers({
     router: connectRouter(history),
     form,
+    /* Add your reducers here */
     tag
-    /* Replace tag with the name of the resource type */
   }),
   applyMiddleware(routerMiddleware(history), thunk)
 );
@@ -33,8 +37,9 @@ ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Switch>
+        {/* <Route path="/" component={Welcome} strict={true} exact={true}/> */}
         {tagRoutes}
-        {/* Replace tagRooutes with the name of the resource type */}
+        {/* Add your routes here */}
         <Route render={() => <h1>Not Found</h1>} />
       </Switch>
     </ConnectedRouter>
