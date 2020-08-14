@@ -14,8 +14,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
 import * as serviceWorker from './serviceWorker';
-
-// Replace "tag" with the name of the resource type
+// Import your reducers and routes here
 
 import tag from './reducers/tag/';
 import tagRoutes from './routes/tag';
@@ -38,8 +37,8 @@ ReactDOM.render(
     <ConnectedRouter history={history}>
       <Switch>
         {/* <Route path="/" component={Welcome} strict={true} exact={true}/> */}
-        {tagRoutes}
         {/* Add your routes here */}
+        {tagRoutes}
         <Route render={() => <h1>Not Found</h1>} />
       </Switch>
     </ConnectedRouter>
