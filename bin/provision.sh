@@ -11,7 +11,7 @@ yarn add redux react-redux redux-thunk redux-form react-router-dom connected-rea
 yarn add bootstrap font-awesome
 
 # yarn add --dev @api-platform/client-generator
-yarn add --dev https://github.com/api-platform/client-generator#master
+# yarn add --dev https://github.com/api-platform/client-generator
 
 cd .. && bin/generate.sh
 cd ${APP_NAME}
